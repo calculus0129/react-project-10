@@ -35,8 +35,8 @@ export default function NewMeetupForm(props) {
           <input type='text' required id='title' ref={titleInputRef} />
         </div>
         <div className={classes.control}>
-          <label htmlFor='image'>Meetup Image</label>
-          <input type='url' required id='image' ref={imageInputRef} />
+          <label htmlFor='image'>Meetup Image URL </label>
+          <input type='url' required id='image' ref={imageInputRef} value='https://static.solved.ac/profile_bg/udpc2023/udpc2023.jpg' />
         </div>
         <div className={classes.control}>
           <label htmlFor='address'>Address</label>
