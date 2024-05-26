@@ -21,7 +21,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     // fetch data for a single meetup
-    const client = await MongoClient.connect(`mongodb+srv://ryanbhang129:${API_KEY}@cluster0.2eujcff.mongodb.net/meetups?retryWrites=true&w=majority&appName=Cluster0`);
+    const client = await MongoClient.connect(`mongodb+srv://ryanbhang129:${process.env.API_KEY}@cluster0.2eujcff.mongodb.net/meetups?retryWrites=true&w=majority&appName=Cluster0`);
     const db = client.db(); // Read, created if not existing
 
     const meetupsCollection = db.collection('meetups');
